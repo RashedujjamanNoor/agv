@@ -1,0 +1,109 @@
+import React, { useState } from "react";
+const DemoTab = () => {
+  const [activeTab, setActiveTab] = useState("youtube");
+
+  const tabs = [
+    { id: "youtube", label: "YouTube Videos" },
+    { id: "shorts", label: "Shorts" },
+    { id: "ads", label: "Ads" },
+  ];
+
+  return (
+    <div className="w-full max-w-5xl mx-auto px-4 py-10">
+      <div className="text-white text-center mb-4">
+        <h3 className="">OUR WORK</h3>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl">FEATURED PROJECTS</h2>
+      </div>
+      {/* Tabs */}
+      <div className="flex justify-center gap-4 mb-8 border-b border-gray-700">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`relative pb-2 text-lg font-medium transition-all ${
+              activeTab === tab.id
+                ? "text-red-500 border-b-2 border-red-500"
+                : "text-gray-400"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Content Section */}
+      <div className="min-h-[300px]">
+        {activeTab === "youtube" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden ">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/LKAsxaC8ZzI?si=8UdT5Kjtn1HypIsn"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/NeIHUFmwjlU?si=Ahk-5i2XdI-xOCoX"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/mSTqwzSOFfU?si=X48OFF3yExVb97To"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "shorts" && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
+              <video
+                controls
+                controlsList="nodownload"
+                src="./demo.mp4"
+              ></video>
+            </div>
+            <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
+              <video
+                controls
+                controlsList="nodownload"
+                src="./demo2.mp4"
+              ></video>
+            </div>
+            <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
+              <video
+                controls
+                controlsList="nodownload"
+                src="./demo.mp4"
+              ></video>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "ads" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden"></div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden"></div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden"></div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default DemoTab;

@@ -63,7 +63,7 @@ const Hero = () => {
             Stunning <span className="text-red-500">Videos</span>
           </h1>
           <div className="max-w-[380px] mt-1">
-            <p className="para text-justify text-[0.8rem] sm:text-base text-gray-300">
+            <p className="para text-justify text-[0.8rem] sm:text-base md:text-lg lg:text-xl text-gray-300">
               At VidlyPro, we handle your video editing so you can focus on
               creating, growing, and connecting with your audience. Get
               viral-style edits, trendy cuts, and platform-ready videos — all
