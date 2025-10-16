@@ -5,7 +5,7 @@ const DemoTab = () => {
   const tabs = [
     { id: "youtube", label: "YouTube Videos" },
     { id: "shorts", label: "Shorts" },
-    { id: "ads", label: "Ads" },
+    { id: "real-estate", label: "Real Estate" },
   ];
 
   return (
@@ -34,7 +34,7 @@ const DemoTab = () => {
       {/* Content Section */}
       <div className="min-h-[300px]">
         {activeTab === "youtube" && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden ">
               <iframe
                 className="w-full h-full"
@@ -59,6 +59,61 @@ const DemoTab = () => {
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/mSTqwzSOFfU?si=X48OFF3yExVb97To"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/mSTqwzSOFfU?si=X48OFF3yExVb97To"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "real-estate" && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
+                frameBorder="0"
+                title="VidlyPro Demo 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -91,14 +146,6 @@ const DemoTab = () => {
                 src="./demo.mp4"
               ></video>
             </div>
-          </div>
-        )}
-
-        {activeTab === "ads" && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden"></div>
-            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden"></div>
-            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden"></div>
           </div>
         )}
       </div>

@@ -1,91 +1,164 @@
-const FAQ = () => {
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const faqs = [
+  {
+    question: "What makes VidlyPro different from other agencies?",
+    answer:
+      "We provide a full in-house team of 40+ professionals, not freelancers. Our DFY Content Funnel and personalized CRM ensure consistent growth for every creator.",
+  },
+  {
+    question: "Do you work with small creators or only big influencers?",
+    answer:
+      "We specialize in helping small to mid-level creators scale fast — delivering professional editing, thumbnails, and marketing strategies to grow your brand.",
+  },
+  {
+    question: "What platforms do you edit for?",
+    answer:
+      "We handle content for YouTube, TikTok, Instagram Reels, and Shorts — all optimized for engagement and retention.",
+  },
+  {
+    question: "Do I need to sign a long-term contract?",
+    answer:
+      "No long commitments! You can start monthly and scale your plan anytime based on your content volume and goals.",
+  },
+  {
+    question: "How fast will I get my edited videos?",
+    answer:
+      "Turnaround time depends on package type — usually within 48–72 hours per video with unlimited revisions until satisfaction.",
+  },
+  {
+    question: "Is there support available if I need help?",
+    answer:
+      "Absolutely! We offer 24/7 support with direct chat access to your project manager and our creative team.",
+  },
+];
+
+export default function FAQ() {
+  const [activeLeft, setActiveLeft] = useState(null);
+  const [activeRight, setActiveRight] = useState(null);
+
+  const toggleFAQ = (index, side) => {
+    if (side === "left") {
+      setActiveLeft(activeLeft === index ? null : index);
+    } else {
+      setActiveRight(activeRight === index ? null : index);
+    }
+  };
+
+  const leftFaqs = faqs.slice(0, 3);
+  const rightFaqs = faqs.slice(3);
+
   return (
-    <div className="flex flex-col justify-center items-center py-10 px-4">
-      <div className="text-white text-center mb-4">
-        <h3 className="">ANY QUERIES YOU HAVE</h3>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl">
-          QUESTIONS YOU MAY ASK
-        </h2>
-      </div>
-      <div className=" text-white max-w-3xl rounded-md">
-        <div className="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" defaultChecked />
-          <div className="collapse-title">Tell me about your agency?</div>
-          <div className="collapse-content text-sm">
-            <p className="para">
-              At VidlyPro, we help coaches, trainers and Creator's build their
-              personal brand through high quality video editing and social media
-              marketing.
-            </p>
+    <div className="relative bg-gradient-to-b from-black via-[#0a0000] to-black py-28 text-white overflow-hidden">
+      {/* Soft ambient red background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.07)_0%,transparent_80%)] pointer-events-none" />
+
+      {/* Small glowing red circle shadow */}
+      <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/20 blur-3xl opacity-40 pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center text-4xl md:text-5xl font-extrabold mb-16"
+        >
+          Frequently Asked <span className="text-red-500">Questions</span>
+        </motion.h2>
+
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+          {/* LEFT COLUMN */}
+          <div className="space-y-6">
+            {leftFaqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                onClick={() => toggleFAQ(index, "left")}
+                className={`cursor-pointer rounded-2xl border border-red-800/30 bg-gradient-to-b from-[#150404] to-[#240505] p-6 transition-all duration-300 hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] hover:border-red-500/50 ${
+                  activeLeft === index ? "border-red-500/70" : ""
+                }`}
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg md:text-xl text-gray-100">
+                    {faq.question}
+                  </h3>
+                  <motion.span
+                    animate={{ rotate: activeLeft === index ? 45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-red-500 text-2xl font-bold"
+                  >
+                    +
+                  </motion.span>
+                </div>
+
+                <AnimatePresence>
+                  {activeLeft === index && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.4 }}
+                      className="mt-4 text-gray-400 leading-relaxed"
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
           </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border-base-300 border mt-4">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title ">
-            Tell me about your content plan?
-          </div>
-          <div className="collapse-content text-sm">
-            <p className="para">
-              We analyze your existing content, identify your niche and offer a
-              comprehensive content plan catering to your personal brand.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border-base-300 border mt-4">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title ">What services will you provide?</div>
-          <div className="collapse-content text-sm">
-            <p className="para">
-              We offer a range of video editing services including YouTube
-              videos, Shorts, Instagram Reels, TikTok and Facebook Reels,
-              Promotional Videos, and more. Our social media marketing services
-              have a proven record of growing sales through creating engaging
-              posts, and running social media ads.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border-base-300 border mt-4">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title ">
-            What if I don’t get the results?
-          </div>
-          <div className="collapse-content text-sm">
-            <p className="para">
-              We have replicated our strategies for multiple brands, channels,
-              and companies and have successfully scaled their businesses
-              through their social media. It is very unlikely that what has
-              worked for everyone else, will not work for you. ;)
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border-base-300 border mt-4">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title ">
-            Why wouldn’t I hire a freelancer?
-          </div>
-          <div className="collapse-content text-sm">
-            <p className="para">
-              We have a dedicated team of 30+ editors. Our quality of work will
-              always outperform any sole freelancer working on their own.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border-base-300 border mt-4">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title ">Tell me about your workflow?</div>
-          <div className="collapse-content text-sm">
-            <p className="para">
-              We understand your project, your consumer base, and your
-              businesses, and then schedule a discovery call with you to
-              understand your requirements. Afterwards, our team takes care of
-              task management, delegation, editing, and running feedback loops
-              with you to ensure best results.
-            </p>
+
+          {/* RIGHT COLUMN */}
+          <div className="space-y-6">
+            {rightFaqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                onClick={() => toggleFAQ(index, "right")}
+                className={`cursor-pointer rounded-2xl border border-red-800/30 bg-gradient-to-b from-[#150404] to-[#240505] p-6 transition-all duration-300 hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] hover:border-red-500/50 ${
+                  activeRight === index ? "border-red-500/70" : ""
+                }`}
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg md:text-xl  text-gray-100">
+                    {faq.question}
+                  </h3>
+                  <motion.span
+                    animate={{ rotate: activeRight === index ? 45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-red-500 text-2xl font-bold"
+                  >
+                    +
+                  </motion.span>
+                </div>
+
+                <AnimatePresence>
+                  {activeRight === index && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.4 }}
+                      className="mt-4 text-gray-400 leading-relaxed"
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default FAQ;
+}
