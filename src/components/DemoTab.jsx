@@ -9,10 +9,12 @@ const DemoTab = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-10">
+    <div className="w-full max-w-5xl mx-auto px-4 py-10" id="work">
       <div className="text-white text-center mb-4">
         <h3 className="">OUR WORK</h3>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl">FEATURED PROJECTS</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-16">
+          FEATURED PROJECTS
+        </h2>
       </div>
       {/* Tabs */}
       <div className="flex justify-center gap-4 mb-8 border-b border-gray-700">

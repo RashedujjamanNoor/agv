@@ -7,17 +7,23 @@ import VidlyproComp from "../components/VidlyproComp";
 import BeforeAfterChart from "../components/BeforeAfterChart";
 import ProcessTimeline from "../components/ProcessTimeline";
 import StatsCounter from "../components/StatsCounter";
+import TestimonialSlider from "../components/TestimonialSlider";
+import CTASection from "../components/CTASection";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="pb-100">
+    <div>
       <Navbar />
       <Hero />
       <StatsCounter />
       <DemoTab />
       <BeforeAfterChart />
+      <TestimonialSlider />
       <VidlyproComp />
       <FAQ />
+      <CTASection />
+      <Footer />
     </div>
   );
 };

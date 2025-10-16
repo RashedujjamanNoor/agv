@@ -58,11 +58,11 @@ const Hero = () => {
       </div> */}
       <div className="absolute z-10 w-full h-full flex justify-center items-end text-white  px-4">
         <div className="max-w-[1440px] md:pb-20 xl:pb-32 w-full flex flex-col md:flex-row md:justify-between md:items-end justify-end items-start">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl  xl:text-8xl 2xl:text-9xl text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-6xl  xl:text-8xl 2xl:text-9xl text-white">
             Elevate Brand <br />
             Stunning <span className="text-red-500">Videos</span>
           </h1>
-          <div className="max-w-[380px] mt-1">
+          <div className="max-w-[380px] mt-1 hidden md:block">
             <p className="para text-justify text-[0.8rem] sm:text-base md:text-lg lg:text-xl text-gray-300">
               At VidlyPro, we handle your video editing so you can focus on
               creating, growing, and connecting with your audience. Get
