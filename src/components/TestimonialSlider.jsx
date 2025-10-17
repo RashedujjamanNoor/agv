@@ -45,7 +45,10 @@ export default function TestimonialCarousel() {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-b from-black via-[#0a0000] to-black py-24 overflow-hidden text-white">
+    <div
+      id="success"
+      className="relative bg-gradient-to-b from-black via-[#0a0000] to-black py-24 overflow-hidden text-white"
+    >
       {/* Subtle glow background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08)_0%,transparent_75%)] pointer-events-none" />
 

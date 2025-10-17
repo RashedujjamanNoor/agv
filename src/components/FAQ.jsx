@@ -50,7 +50,10 @@ export default function FAQ() {
   const rightFaqs = faqs.slice(3);
 
   return (
-    <div className="relative bg-gradient-to-b from-black via-[#0a0000] to-black py-28 text-white overflow-hidden">
+    <div
+      id="faq"
+      className="relative bg-gradient-to-b from-black via-[#0a0000] to-black py-28 text-white overflow-hidden"
+    >
       {/* Soft ambient red background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.07)_0%,transparent_80%)] pointer-events-none" />
 

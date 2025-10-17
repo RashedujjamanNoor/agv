@@ -28,7 +28,10 @@ export default function VidlyproComp() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden flex items-center justify-center p-6 md:p-12">
+    <div
+      id="why-us"
+      className="relative min-h-screen bg-black text-white overflow-hidden flex items-center justify-center p-6 md:p-12"
+    >
       {/* Background Red Circle Glow */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="absolute w-[600px] h-[600px] bg-red-600/30 rounded-full blur-3xl" />
