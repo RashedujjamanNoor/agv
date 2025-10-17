@@ -12,6 +12,8 @@ const StatsCounter = lazy(() => import("../components/StatsCounter"));
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider"));
 const CTASection = lazy(() => import("../components/CTASection"));
 const Footer = lazy(() => import("../components/Footer"));
+const FounderSection = lazy(() => import("../components/FounderSection"));
+const ReviewSlider = lazy(() => import("../components/ReviewSlider"));
 
 const Home = () => {
   return (
@@ -29,7 +31,9 @@ const Home = () => {
         <DemoTab />
         <TestimonialSlider />
         <BeforeAfterChart />
+        <ReviewSlider />
         <VidlyproComp />
+        <FounderSection />
         <FAQ />
         <CTASection />
         <Footer />

@@ -32,23 +32,33 @@ export default function Footer() {
           className="flex justify-center md:justify-center space-x-6 text-sm"
         >
           <li>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              About
+            <a href="#home" className="hover:text-red-500 transition-colors">
+              Home
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              Services
+            <a href="#work" className="hover:text-red-500 transition-colors">
+              Work
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              Testimonials
+            <a href="#success" className="hover:text-red-500 transition-colors">
+              Success
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-red-500 transition-colors">
-              Contact
+            <a href="#review" className="hover:text-red-500 transition-colors">
+              Reviews
+            </a>
+          </li>
+          <li>
+            <a href="#why-us" className="hover:text-red-500 transition-colors">
+              Why us
+            </a>
+          </li>
+          <li>
+            <a href="#faq" className="hover:text-red-500 transition-colors">
+              FAQ
             </a>
           </li>
         </motion.ul>

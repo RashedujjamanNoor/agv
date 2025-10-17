@@ -5,13 +5,13 @@ const DemoTab = () => {
   const tabs = [
     { id: "youtube", label: "YouTube Videos" },
     { id: "shorts", label: "Shorts" },
-    { id: "real-estate", label: "Real Estate" },
+    // { id: "real-estate", label: "Real Estate" },
   ];
 
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-10" id="work">
       <div className="text-white text-center mb-4">
-        <h3 className="">OUR WORK</h3>
+        <h3 className="pt-8">OUR WORK</h3>
         <h2 className="text-4xl md:text-5xl font-extrabold mb-16">
           FEATURED PROJECTS
         </h2>
@@ -80,7 +80,9 @@ const DemoTab = () => {
           </div>
         )}
 
-        {activeTab === "real-estate" && (
+        {/* Real Estate Demos */}
+
+        {/* {activeTab === "real-estate" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
@@ -123,7 +125,7 @@ const DemoTab = () => {
               ></iframe>
             </div>
           </div>
-        )}
+        )} */}
 
         {activeTab === "shorts" && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">

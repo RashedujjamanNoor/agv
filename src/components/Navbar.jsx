@@ -6,26 +6,44 @@ const Navbar = () => {
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  // detect scroll
+  const navLinks = [
+    { name: "Home", id: "home" },
+    { name: "Work", id: "work" },
+    { name: "Success", id: "success" },
+    { name: "Reviews", id: "review" },
+    { name: "Why Us", id: "why-us" },
+    { name: "FAQ", id: "faq" },
+  ];
+
+  // Detect scroll (for navbar bg)
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 60) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 60);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", id: "home" },
-    { name: "Work", id: "work" },
-    { name: "Success", id: "success" },
-    { name: "Why us", id: "why-us" },
-    { name: "FAQ", id: "faq" },
-  ];
+  // Detect which section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // section must be 60% in view
+    );
+
+    navLinks.forEach((link) => {
+      const section = document.getElementById(link.id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.div
@@ -56,11 +74,8 @@ const Navbar = () => {
                 <li key={link.id}>
                   <a
                     href={`#${link.id}`}
-                    onClick={() => setActive(link.id)}
                     className={`transition-colors duration-300 ${
-                      active === link.id
-                        ? "text-red-500 font-semibold"
-                        : "hover:text-red-500"
+                      active === link.id ? "text-red-500" : "hover:text-red-500"
                     }`}
                   >
                     {link.name}
@@ -72,10 +87,10 @@ const Navbar = () => {
         </div>
 
         {/* Book Call Button */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <a
-            href="#"
-            className={`text-base px-4 py-2 rounded-md font-semibold transition-all duration-300 ${
+            href="https://calendly.com/noorrk042/30min"
+            className={`text-base px-4 py-2 rounded-md  transition-all duration-300 ${
               scrolled
                 ? "bg-red-600 text-white hover:bg-white hover:text-red-600"
                 : "bg-white/10 text-white border border-white/20 hover:bg-red-600 hover:text-white"
@@ -96,7 +111,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -111,14 +126,9 @@ const Navbar = () => {
                 <li key={link.id}>
                   <a
                     href={`#${link.id}`}
-                    onClick={() => {
-                      setActive(link.id);
-                      setMenuOpen(false);
-                    }}
+                    onClick={() => setMenuOpen(false)}
                     className={`transition-colors duration-300 ${
-                      active === link.id
-                        ? "text-red-500 font-semibold"
-                        : "hover:text-red-500"
+                      active === link.id ? "text-red-500" : "hover:text-red-500"
                     }`}
                   >
                     {link.name}
