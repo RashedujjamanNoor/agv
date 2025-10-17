@@ -126,7 +126,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="#"
+                  href="https://calendly.com/noorrk042/30min"
                   className="bg-red-600 text-white px-5 py-2 rounded-md hover:bg-white hover:text-red-600 duration-300 "
                 >
                   BOOK A CALL

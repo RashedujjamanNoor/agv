@@ -32,7 +32,7 @@ export default function CTASection() {
 
         {/* CTA Button */}
         <motion.a
-          href="#"
+          href="https://calendly.com/noorrk042/30min"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
