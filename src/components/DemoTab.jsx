@@ -70,7 +70,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/mSTqwzSOFfU?si=X48OFF3yExVb97To"
+                src="https://www.youtube.com/embed/OZJI-9tNmlE?si=9iTixTcl0rgqsKpK"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -131,21 +131,21 @@ const DemoTab = () => {
               <video
                 controls
                 controlsList="nodownload"
-                src="./demo.mp4"
+                src="./shorts1.mp4"
               ></video>
             </div>
             <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
               <video
                 controls
                 controlsList="nodownload"
-                src="./demo2.mp4"
+                src="./shorts2.mp4"
               ></video>
             </div>
             <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
               <video
                 controls
                 controlsList="nodownload"
-                src="./demo.mp4"
+                src="./shorts3.mp4"
               ></video>
             </div>
           </div>

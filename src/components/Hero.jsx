@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="relative w-screen h-[35vh] md:h-[50vh] lg:h-[50vh] xl:h-[80vh] overflow-hidden 2xl:h-[100vh]">
         <iframe
           className="absolute top-0 left-0 w-full h-full scale-150 object-cover pointer-events-none"
-          src="https://www.youtube.com/embed/pVA0G01aDfk?autoplay=1&mute=1&loop=1&controls=0&start=4&end=107&playlist=pVA0G01aDfk&modestbranding=1&showinfo=0&iv_load_policy=3&rel=0"
+          src="https://www.youtube.com/embed/S8jK28eRyVQ?autoplay=1&mute=1&loop=1&controls=0&start=0&playlist=S8jK28eRyVQ&modestbranding=1&showinfo=0&iv_load_policy=3&rel=0"
           title="YouTube background video"
           frameBorder="0"
           allow="autoplay; fullscreen"
