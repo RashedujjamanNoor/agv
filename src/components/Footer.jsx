@@ -22,6 +22,10 @@ export default function Footer() {
             Empowering creators with next-level video editing & content
             strategy.
           </p>
+          <p className="text-sm text-gray-600 mt-1">
+            📍 Based in{" "}
+            <span className="text-gray-400">Gulshan 1, Dhaka, Bangladesh</span>
+          </p>
         </motion.div>
 
         {/* Links */}
@@ -89,7 +93,8 @@ export default function Footer() {
       <div className="relative z-10 mt-8 border-t border-red-900/10 pt-6 text-center text-sm text-gray-600">
         © {new Date().getFullYear()}{" "}
         <span className="text-white font-medium">VidlyPro</span>. All rights
-        reserved.
+        reserved. |
+        <span className="text-gray-400"> Gulshan 1, Dhaka, Bangladesh</span>
       </div>
     </footer>
   );
