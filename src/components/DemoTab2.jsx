@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-const DemoTab = () => {
+const DemoTab2 = () => {
   const [activeTab, setActiveTab] = useState("youtube");
 
   const tabs = [
-    { id: "youtube", label: "YouTube Videos" },
-    { id: "shorts", label: "Shorts" },
+    { id: "youtube", label: "Horizontal Ads" },
+    { id: "shorts", label: "Vertical Ads" },
     // { id: "real-estate", label: "Real Estate" },
   ];
 
@@ -40,7 +40,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden ">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/LKAsxaC8ZzI?si=8UdT5Kjtn1HypIsn"
+                src="https://www.youtube.com/embed/L3Ee6beS2lg?si=o-gQwroefEgIl1sU"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -50,7 +50,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/NeIHUFmwjlU?si=Ahk-5i2XdI-xOCoX"
+                src="https://www.youtube.com/embed/Xi-_f5gpff0?si=g6mcMLPCcP8dIhDe"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -60,7 +60,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/mSTqwzSOFfU?si=X48OFF3yExVb97To"
+                src="https://www.youtube.com/embed/A9ORM6D7fHM?si=Fp7EG50bHXDFFGGc"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -70,7 +70,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/OZJI-9tNmlE?si=9iTixTcl0rgqsKpK"
+                src="https://www.youtube.com/embed/rgdaTsM5y3s?si=R8MxWxB4AbQhHOgl"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -132,7 +132,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/3Pc6ncVO3gk?si=LjoHgXgTBjN8ZQWn"
+                src="https://www.youtube.com/embed/o1gV7JOtyyk?si=PmoNfFJwjkcaeWl8"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -142,7 +142,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/Fseynt_vMSg?si=jHrUCi0WvBY-gmay"
+                src="https://www.youtube.com/embed/9rns1zE_raM?si=WTfUbAAKZRtUSo5H"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -152,7 +152,7 @@ const DemoTab = () => {
             <div className="bg-gray-800 aspect-[9/16] rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/QrwEfSZUnRs?si=xThQ_LhUOT5GcO70"
+                src="https://www.youtube.com/embed/nAREDSIEQwE?si=y36gLTNKzA9_p9tb"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -166,4 +166,4 @@ const DemoTab = () => {
   );
 };
 
-export default DemoTab;
+export default DemoTab2;
