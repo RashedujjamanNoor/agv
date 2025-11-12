@@ -5,7 +5,7 @@ const DemoTab2 = () => {
   const tabs = [
     { id: "youtube", label: "Horizontal Ads" },
     { id: "shorts", label: "Vertical Ads" },
-    // { id: "real-estate", label: "Real Estate" },
+    { id: "real-estate", label: "Real Estate" },
   ];
 
   return (
@@ -82,7 +82,7 @@ const DemoTab2 = () => {
 
         {/* Real Estate Demos */}
 
-        {/* {activeTab === "real-estate" && (
+        {activeTab === "real-estate" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
@@ -97,7 +97,7 @@ const DemoTab2 = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
+                src="https://www.youtube.com/embed/kfHERkdcVIw?si=tbiO8p1msOryrZJO"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -107,14 +107,14 @@ const DemoTab2 = () => {
             <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
+                src="https://www.youtube.com/embed/w4EHJexKiaA?si=j5x3aobcKQ2wrxkE"
                 frameBorder="0"
                 title="VidlyPro Demo 1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
+            {/* <div className="bg-gray-800 aspect-video rounded-xl overflow-hidden">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/PVr_YwuGRws?si=MSsGZUSWZeuqqNqj"
@@ -123,9 +123,9 @@ const DemoTab2 = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
-            </div>
+            </div> */}
           </div>
-        )} */}
+        )}
 
         {activeTab === "shorts" && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
